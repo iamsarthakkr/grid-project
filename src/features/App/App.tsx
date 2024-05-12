@@ -3,6 +3,7 @@ import { Toolbar } from "../Toolbar";
 import { Grid } from "../Grid";
 import styled from "styled-components";
 import { FlexCol } from "../../components";
+import { AppContextProvider } from "./AppContextProvider";
 
 const Container = styled(FlexCol)`
    width: 100vw;
@@ -12,10 +13,12 @@ const Container = styled(FlexCol)`
 
 function App() {
    return (
-      <Container>
-         <Toolbar />
-         <Grid />
-      </Container>
+      <AppContextProvider>
+         <Container>
+            <Toolbar />
+            <Grid />
+         </Container>
+      </AppContextProvider>
    );
 }
 

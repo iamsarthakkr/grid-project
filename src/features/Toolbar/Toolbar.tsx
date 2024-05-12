@@ -9,5 +9,5 @@ const ToolbarCont = styled.div`
 `;
 
 export const Toolbar = () => {
-   return <ToolbarCont>Toolbar</ToolbarCont>;
+   return <ToolbarCont>Grid App</ToolbarCont>;
 };
