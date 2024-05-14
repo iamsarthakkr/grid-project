@@ -33,16 +33,11 @@ export const Grid = () => {
             w = ref.current.offsetWidth;
          const columns = Math.floor(w / CELL_SIZE);
          const rows = Math.floor(h / CELL_SIZE);
-         const grid = generateGrid(rows, columns);
-         console.log({ gen: grid });
-
-         actions.initGrid(grid);
+         actions.initGrid(generateGrid(rows, columns));
       }
-   }, []);
+   }, [actions]);
 
    const Grid = React.useMemo(() => {
-      console.log({ grid });
-
       return grid.map((row, i) => {
          return (
             <GridRow height={CELL_SIZE} key={i}>

@@ -8,7 +8,6 @@ import { AppContextProvider } from "./AppContextProvider";
 const Container = styled(FlexCol)`
    width: 100vw;
    height: 100vh;
-   border: 1px solid red;
 `;
 
 function App() {

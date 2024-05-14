@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { CELL_SIZE } from "../../constants";
 import { useAppContext } from "../App/useAppContext";
 
-const CellCont = styled.div<{ lastRow: boolean; lastColumn: boolean }>`
+const CellCont = styled.div<{ $lastRow: boolean; $lastColumn: boolean }>`
    width: ${() => `${CELL_SIZE}px`};
    height: ${() => `${CELL_SIZE}px`};
    border: none;
    border-top: 1px solid black;
    border-left: 1px solid black;
-   border-right: ${(props) => (props.lastColumn ? `1px solid black` : "none")};
-   border-bottom: ${(props) => (props.lastRow ? `1px solid black` : "none")};
+   border-right: ${(props) => (props.$lastColumn ? `1px solid black` : "none")};
+   border-bottom: ${(props) => (props.$lastRow ? `1px solid black` : "none")};
 `;
 
 interface ICell {
@@ -25,5 +25,5 @@ export const Cell: React.FC<ICell> = (props) => {
    const lastCol = props.column === columns - 1,
       lastRow = props.row === rows - 1;
 
-   return <CellCont lastColumn={lastCol} lastRow={lastRow} />;
+   return <CellCont $lastColumn={lastCol} $lastRow={lastRow} />;
 };
