@@ -1,5 +1,5 @@
 import { ICoordinates, IGrid } from "./IGrid";
-import { Action, Action1, Action2, Provider } from "./types";
+import { Action1, Action2, Provider } from "./types";
 
 export interface IAppContext {
    grid: IGrid;
